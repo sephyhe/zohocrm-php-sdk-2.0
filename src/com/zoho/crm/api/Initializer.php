@@ -280,7 +280,7 @@ class Initializer
 
         $key = explode("@", $userMail)[0] . $environment->getUrl();
 
-        $input = unpack('C*', utf8_encode($key));
+        $input = unpack('C*', mb_convert_encoding($key, 'UTF-8', 'ISO-8859-1'));
 
         return base64_encode(implode(array_map("chr", $input)));
     }
