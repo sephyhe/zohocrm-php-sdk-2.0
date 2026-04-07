@@ -26,7 +26,7 @@ class UserSignature
 
             $error[Constants::EXPECTED_TYPE] = Constants::EMAIL;
 
-            throw new SDKException(Constants::USER_SIGNATURE_ERROR, null, $error, null);
+            throw new SDKException(Constants::USER_SIGNATURE_ERROR, "", $error, null);
         }
 
         $this->email = $email;
